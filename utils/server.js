@@ -142,7 +142,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, host, () => {
   const localIps = getLocalIpAddresses();
   console.log("\n=======================================================");
-  console.log("  ⚡ VessertID Standalone HTTP Server (Three.js Style) ");
+  console.log("  ⚡ VessertID Standalone HTTP Server                  ");
   console.log("=======================================================");
   console.log(`  Root Directory : ${rootDir}`);
   console.log(`  Local          : http://localhost:${port}/`);

@@ -110,7 +110,7 @@ All font binaries are accessible directly across `woff2`, `woff`, `ttf`, `otf`, 
 
 ---
 
-## 🛠 Local Development & Testing (Three.js Style)
+## 🛠 Local Development & Testing
 
 VessertRepositoryID provides a dedicated standalone HTTP server and test suite with **zero external dependencies**:
 

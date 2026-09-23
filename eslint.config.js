@@ -1,7 +1,7 @@
 /**
  * VessertRepositoryID - ESLint Configuration
- * Modeled after Three.js flat config architecture
- * Designed for future modular growth across /src, /editor, /test, and /internal-ui
+ * Self-contained static analysis rules
+ * Enforces clean boundaries across /src, /editor, /test, and /internal-ui
  */
 
 export default [
@@ -51,7 +51,7 @@ export default [
     }
   },
 
-  // 3. Editor & Playground Rules (Prepared for Future Editor/Tools)
+  // 3. Editor & Tools Rules
   {
     name: 'vessertid:editor',
     files: ['editor/**/*.js', 'tools/**/*.js'],
@@ -61,7 +61,7 @@ export default [
     }
   },
 
-  // 4. Test Isolation Rules (Unit & E2E Tests)
+  // 4. Test Isolation Rules
   {
     name: 'vessertid:tests',
     files: ['test/**/*.js'],
@@ -78,7 +78,6 @@ export default [
       }
     },
     rules: {
-      // Three.js architectural rule: tests must import from source/utils, not stale dist/build
       'no-restricted-imports': [
         'error',
         {
