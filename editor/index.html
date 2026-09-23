@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VessertID Interactive Studio Editor</title>
+  <link rel="stylesheet" href="/internal.min.css">
+  <style>
+    .editor-layout { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+    .editor-sidebar { background: #0f172a; color: #f8fafc; padding: 1.5rem; overflow-y: auto; }
+    .editor-viewport { background: #f8fafc; padding: 2rem; overflow-y: auto; }
+    .color-swatch { width: 100%; height: 40px; border-radius: 6px; margin-top: 0.5rem; }
+  </style>
+</head>
+<body class="vessert-body">
+  <div class="editor-layout">
+    <aside class="editor-sidebar">
+      <h2 class="vessert-h3">VessertID Studio</h2>
+      <p class="vessert-text-xs vessert-text-muted vessert-mt-1">Interactive Component & Font Playground</p>
+      
+      <div class="vessert-mt-6">
+        <label class="vessert-label">Color Token</label>
+        <input type="color" id="colorPicker" value="#2563eb" class="vessert-input vessert-mt-1">
+        <div id="swatch" class="color-swatch" style="background: #2563eb;"></div>
+      </div>
+
+      <div class="vessert-mt-6">
+        <label class="vessert-label">Select Font Family</label>
+        <select id="fontSelect" class="vessert-select vessert-mt-1">
+          <option value="VessertID-inter">VessertID Inter</option>
+          <option value="VessertID-roboto">VessertID Roboto</option>
+          <option value="VessertID-poppins">VessertID Poppins</option>
+          <option value="VessertID-montserrat">VessertID Montserrat</option>
+          <option value="VessertID-jetbrains-mono">VessertID JetBrains Mono</option>
+        </select>
+      </div>
+
+      <div class="vessert-mt-6">
+        <label class="vessert-label">Icon Preview</label>
+        <div class="vessert-flex vessert-gap-2 vessert-mt-2">
+          <svg class="vessert-icon vessert-icon-lg"><use href="/vessert-sprite.svg#vessert-icon-star-solid"></use></svg>
+          <svg class="vessert-icon vessert-icon-lg"><use href="/vessert-sprite.svg#vessert-icon-heart-solid"></use></svg>
+          <svg class="vessert-icon vessert-icon-lg"><use href="/vessert-sprite.svg#vessert-icon-settings-line"></use></svg>
+        </div>
+      </div>
+    </aside>
+
+    <main class="editor-viewport">
+      <div class="vessert-card vessert-p-6">
+        <h1 id="previewHeading" class="vessert-h1">Interactive Typography Preview</h1>
+        <p id="previewText" class="vessert-lead vessert-mt-3">
+          Every font file, vector SVG sprite, and raster graphic is bundled without external dependencies. Test real-time rendering directly in the browser.
+        </p>
+        <div class="vessert-flex vessert-gap-3 vessert-mt-6">
+          <button class="vessert-btn vessert-btn-primary" id="demoBtn">Primary Button</button>
+          <button class="vessert-btn vessert-btn-outline">Outline Button</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module">
+    import { Color } from '/src/VessertID.js';
+
+    const colorPicker = document.getElementById('colorPicker');
+    const swatch = document.getElementById('swatch');
+    const demoBtn = document.getElementById('demoBtn');
+    const fontSelect = document.getElementById('fontSelect');
+    const heading = document.getElementById('previewHeading');
+
+    colorPicker.addEventListener('input', (e) => {
+      const color = Color.fromHex(e.target.value);
+      swatch.style.background = color.toHex();
+      demoBtn.style.backgroundColor = color.toHex();
+    });
+
+    fontSelect.addEventListener('change', (e) => {
+      heading.style.fontFamily = e.target.value;
+    });
+  </script>
+</body>
+</html>

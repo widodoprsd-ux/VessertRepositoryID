@@ -127,10 +127,16 @@ When running, the server outputs:
   Network (HP)   : http://192.168.x.x:8080/
 ```
 
-### 2. Automated Visual & E2E Testing with Puppeteer
+### 2. Testing Suite (Unit & E2E)
 ```bash
-# Run headless browser test suite
+# Run unit tests (testing core color models, typography, icon and font registries)
+npm run test-unit
+
+# Run headless browser E2E test suite
 npm run test-e2e
+
+# Run all tests
+npm test
 
 # Capture full-page screenshot
 npm run make-screenshot
@@ -138,14 +144,17 @@ npm run make-screenshot
 
 ### 3. Code Quality & Linting (ESLint Flat Config)
 ```bash
-# Lint JavaScript source and utilities
+# Lint JavaScript source, utilities, tests, and internal UI
 npm run lint
 
 # Auto-fix linting issues
 npm run lint-fix
 ```
 
-### 4. Build Assets
+### 4. Interactive Studio Editor
+Launch `editor/index.html` via the local server (`http://localhost:8080/editor/index.html`) to test live color tokens and font families directly.
+
+### 5. Build Assets
 ```bash
 # Generate font assets, raster binaries, CSS bundle, and SVG sprites
 npm run build

@@ -41,9 +41,10 @@
     "dev": "node utils/server.js -p 3000",
     "server": "node utils/server.js -p 8080",
     "build": "node internal-ui/build.js",
-    "lint": "eslint internal-ui utils test",
-    "lint-fix": "eslint internal-ui utils test --fix",
-    "test": "node test/e2e/puppeteer.js",
+    "lint": "eslint internal-ui utils test src",
+    "lint-fix": "eslint internal-ui utils test src --fix",
+    "test": "node test/unit/VessertID.test.js && node test/e2e/puppeteer.js",
+    "test-unit": "node test/unit/VessertID.test.js",
     "test-e2e": "node test/e2e/puppeteer.js",
     "make-screenshot": "node test/e2e/puppeteer.js --make-screenshot",
     "preview": "node utils/server.js -p 8080"
