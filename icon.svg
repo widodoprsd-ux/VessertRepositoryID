@@ -1,50 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
-    <!-- Warna klasik: navy & gold -->
-    <linearGradient id="classicBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1B2A49"/>
-      <stop offset="100%" stop-color="#0F1A2E"/>
-    </linearGradient>
-    
-    <!-- Gold klasik -->
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#E8C87A"/>
-      <stop offset="50%" stop-color="#C9A44C"/>
-      <stop offset="100%" stop-color="#8B6F2E"/>
+    <linearGradient id="modGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#6E00FF"/>
     </linearGradient>
   </defs>
   
-  <!-- Background kotak klasik (bukan rounded iOS) -->
-  <rect x="4" y="4" width="120" height="120" rx="8" ry="8" 
-        fill="url(#classicBg)" 
-        stroke="url(#goldGrad)" stroke-width="2"/>
+  <!-- Rounded square -->
+  <rect x="8" y="8" width="112" height="112" rx="28" ry="28" fill="url(#modGrad)"/>
   
-  <!-- Border ganda klasik -->
-  <rect x="12" y="12" width="104" height="104" rx="4" ry="4" 
-        fill="none" 
-        stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+  <!-- Huruf V sans-serif sederhana -->
+  <path d="M34,36 L48,36 L64,82 L80,36 L94,36 L72,98 L56,98 Z" fill="#FFFFFF"/>
   
-  <!-- ===== HURUF "V" SERIF KLASIK ===== -->
-  <!-- Menggunakan font serif / bentuk manual dengan kaki (serif) -->
-  <text x="64" y="88" 
-        font-family="'Times New Roman', 'Georgia', 'Garamond', serif" 
-        font-size="72" 
-        font-weight="700" 
-        fill="url(#goldGrad)" 
-        text-anchor="middle"
-        letter-spacing="-2">V</text>
-  
-  <!-- Ornamen garis klasik di bawah V -->
-  <line x1="34" y1="96" x2="58" y2="96" stroke="url(#goldGrad)" stroke-width="1.5"/>
-  <line x1="70" y1="96" x2="94" y2="96" stroke="url(#goldGrad)" stroke-width="1.5"/>
-  <circle cx="64" cy="96" r="2" fill="url(#goldGrad)"/>
-  
-  <!-- Tulisan "ID" kecil serif -->
-  <text x="64" y="112" 
-        font-family="'Times New Roman', 'Georgia', serif" 
-        font-size="11" 
-        font-weight="400" 
-        fill="#E8C87A" 
-        text-anchor="middle"
-        letter-spacing="4">ID</text>
+  <!-- Label ID minimalis -->
+  <text x="64" y="116" font-family="Arial, Helvetica, sans-serif" 
+        font-size="10" font-weight="700" fill="#FFFFFF" 
+        text-anchor="middle" letter-spacing="4" opacity="0.9">ID</text>
 </svg>
