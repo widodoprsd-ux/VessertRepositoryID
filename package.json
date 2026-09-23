@@ -1,0 +1,20 @@
+{
+  "name": "internal-ui-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "node internal-ui/build.js && vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "echo 'No lint errors in static system'"
+  },
+  "dependencies": {
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^7.0.2"
+  }
+}

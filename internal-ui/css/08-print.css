@@ -1,0 +1,18 @@
+@media print {
+  .vessert-header,
+  .vessert-footer,
+  .vessert-nav,
+  .vessert-btn { display: none !important; }
+  .vessert-body {
+    color: #000;
+    background: #fff;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  a { color: #000; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #555; }
+  .vessert-card { box-shadow: none; border: 1px solid #000; }
+  .vessert-container { max-width: 100%; padding: 0; }
+  img, svg { max-width: 100% !important; page-break-inside: avoid; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+}

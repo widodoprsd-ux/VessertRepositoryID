@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <font id="vessert-font-dancing-script" horiz-adv-x="1000">
+      <font-face font-family="VessertID-Dancing Script" units-per-em="1000" ascent="800" descent="-200" font-weight="400" font-style="normal" />
+      <missing-glyph horiz-adv-x="500" d="M 50 0 L 50 700 L 450 700 L 450 0 Z M 100 50 L 400 50 L 400 650 L 100 650 Z" />
+    <glyph unicode=" " horiz-adv-x="500" d="" />
+    <glyph unicode="A" horiz-adv-x="1000" d="M 100 0 L 500 800 L 900 0 L 720 0 L 600 240 L 400 240 L 280 0 Z M 450 360 L 550 360 L 500 580 Z" />
+    <glyph unicode="B" horiz-adv-x="1000" d="M 150 0 L 150 800 L 600 800 C 750 800 850 720 850 580 C 850 480 780 420 680 400 C 800 380 880 300 880 180 C 880 40 760 0 580 0 Z M 320 480 L 560 480 C 640 480 700 520 700 600 C 700 680 640 700 560 700 L 320 700 Z M 320 120 L 560 120 C 650 120 720 160 720 260 C 720 360 650 380 560 380 L 320 380 Z" />
+    <glyph unicode="C" horiz-adv-x="950" d="M 850 200 C 780 80 680 0 500 0 C 260 0 100 200 100 480 C 100 760 260 880 500 880 C 680 880 780 800 850 680 L 720 580 C 670 680 590 740 500 740 C 340 740 240 600 240 480 C 240 360 340 220 500 220 C 590 220 670 280 720 380 Z" />
+    <glyph unicode="E" horiz-adv-x="900" d="M 150 0 L 150 800 L 800 800 L 800 660 L 320 660 L 320 480 L 750 480 L 750 360 L 320 360 L 320 140 L 820 140 L 820 0 Z" />
+    <glyph unicode="I" horiz-adv-x="600" d="M 350 0 L 350 800 L 550 800 L 550 0 Z" />
+    <glyph unicode="O" horiz-adv-x="1000" d="M 500 0 C 260 0 100 180 100 480 C 100 780 260 880 500 880 C 740 880 900 780 900 480 C 900 180 740 0 500 0 Z M 500 140 C 640 140 750 280 750 480 C 750 680 640 740 500 740 C 360 740 250 680 250 480 C 250 280 360 140 500 140 Z" />
+    <glyph unicode="R" horiz-adv-x="1000" d="M 150 0 L 150 800 L 580 800 C 740 800 850 710 850 560 C 850 440 770 370 650 340 L 880 0 L 680 0 L 480 320 L 320 320 L 320 0 Z M 320 460 L 560 460 C 640 460 700 500 700 580 C 700 660 640 680 560 680 L 320 680 Z" />
+    <glyph unicode="T" horiz-adv-x="900" d="M 50 800 L 850 800 L 850 660 L 520 660 L 520 0 L 380 0 L 380 660 L 50 660 Z" />
+    <glyph unicode="V" horiz-adv-x="1000" d="M 50 800 L 450 0 L 550 0 L 950 800 L 780 800 L 500 180 L 220 800 Z" />
+    </font>
+  </defs>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "Internal UI - Zero External Design System",
+  "description": "Zero external UI system. Hand-written CSS, hand-drawn SVG icons, hand-encoded PNG/ICO/BMP, and VessertID naming specification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

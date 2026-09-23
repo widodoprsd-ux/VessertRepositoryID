@@ -1,0 +1,56 @@
+/* VessertID Font Declarations - Generated from internal-ui source fonts */
+@font-face {
+  font-family: 'VessertID-Inter';
+  src: url('/assets/source/fonts/VessertID-inter.woff2') format('woff2'),
+       url('/assets/source/fonts/VessertID-inter.woff') format('woff'),
+       url('/assets/source/fonts/VessertID-inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VessertID-TimesNewRoman';
+  src: url('/assets/source/fonts/VessertID-times-new-roman.woff2') format('woff2'),
+       url('/assets/source/fonts/VessertID-times-new-roman.woff') format('woff'),
+       url('/assets/source/fonts/VessertID-times-new-roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VessertID-JetBrainsMono';
+  src: url('/assets/source/fonts/VessertID-jetbrains-mono.woff2') format('woff2'),
+       url('/assets/source/fonts/VessertID-jetbrains-mono.woff') format('woff'),
+       url('/assets/source/fonts/VessertID-jetbrains-mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VessertID-DancingScript';
+  src: url('/assets/source/fonts/VessertID-dancing-script.woff2') format('woff2'),
+       url('/assets/source/fonts/VessertID-dancing-script.woff') format('woff'),
+       url('/assets/source/fonts/VessertID-dancing-script.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VessertID-Impact';
+  src: url('/assets/source/fonts/VessertID-impact.woff2') format('woff2'),
+       url('/assets/source/fonts/VessertID-impact.woff') format('woff'),
+       url('/assets/source/fonts/VessertID-impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.vessert-font-inter { font-family: 'VessertID-Inter', var(--vessert-font-sans); }
+.vessert-font-times { font-family: 'VessertID-TimesNewRoman', serif; }
+.vessert-font-jetbrains { font-family: 'VessertID-JetBrainsMono', var(--vessert-font-mono); }
+.vessert-font-dancing { font-family: 'VessertID-DancingScript', cursive; }
+.vessert-font-impact { font-family: 'VessertID-Impact', sans-serif; }

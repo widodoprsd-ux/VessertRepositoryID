@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internal UI Zero External</title>
+<meta name="description" content="Self-contained UI system. Hand-written CSS, hand-drawn SVG, hand-encoded PNG, ICO, BMP, WOFF2, TTF fonts.">
+<link rel="icon" type="image/svg+xml" href="/assets/vector/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/assets/raster/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/raster/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:title" content="Internal UI Zero External">
+<meta property="og:description" content="Zero external. Written by hand.">
+<meta property="og:image" content="/assets/raster/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/internal.min.css">
+</head>
+<body class="vessert-body">
+<header class="vessert-header">
+<div class="vessert-container vessert-header-inner">
+<a href="/" class="vessert-brand">
+<svg class="vessert-logo" viewBox="0 0 48 48">
+<use href="/vessert-sprite.svg#vessert-logo-mark"></use>
+</svg>
+<span class="vessert-brand-name">Internal UI</span>
+</a>
+<nav class="vessert-nav">
+<a href="#features" class="vessert-nav-link">Features</a>
+<a href="#fonts" class="vessert-nav-link">Fonts</a>
+<a href="#icons" class="vessert-nav-link">Icons</a>
+<a href="#formats" class="vessert-nav-link">Formats</a>
+<button class="vessert-btn vessert-btn-primary vessert-btn-sm">
+<svg class="vessert-icon vessert-icon-sm"><use href="/vessert-sprite.svg#vessert-icon-user-line"></use></svg>
+Sign in
+</button>
+</nav>
+</div>
+</header>
+<main class="vessert-container vessert-main">
+<section class="vessert-grid-2">
+<div>
+<span class="vessert-badge vessert-badge-brand">Version 1.0.0</span>
+<h1 class="vessert-h1 vessert-mt-4 vessert-text-balance">Internal UI. Zero external. Written by hand.</h1>
+<p class="vessert-lead vessert-mt-4 vessert-text-pretty">No npm. No node_modules. No external SVG. No Tailwind. No CDN. No font download. PNG, ICO, BMP, and 25 font families in WOFF2, TTF, WOFF, OTF, EOT, SVG are encoded by internal code itself.</p>
+<div class="vessert-flex vessert-gap-3 vessert-mt-6 vessert-flex-wrap">
+<a href="#fonts" class="vessert-btn vessert-btn-primary vessert-btn-lg">
+<svg class="vessert-icon"><use href="/vessert-sprite.svg#vessert-icon-search-line"></use></svg>
+Explore fonts
+</a>
+<a href="#icons" class="vessert-btn vessert-btn-outline vessert-btn-lg">Browse icons</a>
+</div>
+</div>
+<div>
+<img src="/assets/vector/img/vessert-illus-hero.svg" alt="Hero" class="vessert-rounded-lg vessert-shadow-lg vessert-w-full">
+</div>
+</section>
+<section id="fonts" class="vessert-section">
+<div class="vessert-flex vessert-justify-between vessert-items-center vessert-flex-wrap vessert-gap-2">
+<div>
+<h2 class="vessert-h2">VessertID font collection (25 families &times; 6 formats)</h2>
+<p class="vessert-muted vessert-mt-2">Generated internally per font per file: <code>.woff2</code>, <code>.woff</code>, <code>.ttf</code>, <code>.otf</code>, <code>.eot</code>, <code>.svg</code>.</p>
+</div>
+<span class="vessert-badge vessert-badge-success">150 Font Files</span>
+</div>
+<div class="vessert-grid-3 vessert-mt-8">
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">1. Sans-Serif (8)</h3>
+<span class="vessert-badge vessert-badge-brand">Modern</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Clean, precise, zero-serif letterforms for UI and screens.</p>
+<div class="vessert-stack vessert-stack-sm vessert-mt-2">
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Inter</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Helvetica</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Roboto &bull; SF Pro &bull; Segoe UI</div>
+<div class="vessert-text-xs vessert-muted">Poppins &bull; Montserrat &bull; Arial</div>
+</div>
+</div>
+</div>
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">2. Serif (6)</h3>
+<span class="vessert-badge vessert-badge-brand">Editorial</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Balanced classical proportions with elegant bracketed feet.</p>
+<div class="vessert-stack vessert-stack-sm vessert-mt-2">
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-TimesNewRoman</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Georgia &bull; Garamond</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Baskerville &bull; Playfair &bull; Merriweather</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+</div>
+</div>
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">3. Monospace (5)</h3>
+<span class="vessert-badge vessert-badge-brand">Terminal</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Uniform advance width glyphs for code, tables, and telemetry.</p>
+<div class="vessert-stack vessert-stack-sm vessert-mt-2">
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-JetBrainsMono</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-FiraCode &bull; Consolas</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-SFMono &bull; CourierNew</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+</div>
+</div>
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">4. Display (3)</h3>
+<span class="vessert-badge vessert-badge-brand">Poster</span>
+</div>
+<p class="vessert-muted vessert-text-sm">High-impact letterforms tailored for heroic titles.</p>
+<div class="vessert-stack vessert-stack-sm vessert-mt-2">
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Impact &bull; BebasNeue</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-Cinzel</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+</div>
+</div>
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">5. Script (3)</h3>
+<span class="vessert-badge vessert-badge-brand">Handwriting</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Organic cursive strokes for signatures and personal touch.</p>
+<div class="vessert-stack vessert-stack-sm vessert-mt-2">
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-DancingScript</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+<div class="vessert-p-2 vessert-rounded-md" style="background-color: var(--vessert-color-gray-50); border: 1px solid var(--vessert-color-gray-200);">
+<div class="vessert-font-semibold vessert-text-sm">VessertID-BrushScript &bull; Caveat</div>
+<div class="vessert-text-xs vessert-muted">Formats: .woff2 .woff .ttf .otf .eot .svg</div>
+</div>
+</div>
+</div>
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">6. Supported Formats</h3>
+<span class="vessert-badge vessert-badge-success">Native</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Every single font is produced into individual files:</p>
+<ul class="vessert-muted vessert-text-sm vessert-stack vessert-stack-sm vessert-mt-2">
+<li><strong>.woff2</strong> &mdash; Brotli / Modern web (compressed)</li>
+<li><strong>.woff</strong> &mdash; zlib Deflate web format</li>
+<li><strong>.ttf</strong> &mdash; TrueType sfnt table binary</li>
+<li><strong>.otf</strong> &mdash; OpenType sfnt binary</li>
+<li><strong>.eot</strong> &mdash; Embedded OpenType binary</li>
+<li><strong>.svg</strong> &mdash; W3C SVG 1.1 Font vector XML</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="features" class="vessert-section">
+<h2 class="vessert-h2">Built for zero external</h2>
+<p class="vessert-muted vessert-mt-2">Everything lives in this repository. Nothing reaches the internet at build time.</p>
+<div class="vessert-grid-3 vessert-mt-8">
+<div class="vessert-card vessert-card-hover">
+<svg class="vessert-icon vessert-icon-lg vessert-color-brand-600"><use href="/vessert-sprite.svg#vessert-icon-menu-line"></use></svg>
+<h3 class="vessert-h3 vessert-mt-3">Zero npm</h3>
+<p class="vessert-muted vessert-text-sm vessert-mt-1">build.js uses only fs, path, zlib, crypto from Node built-ins.</p>
+</div>
+<div class="vessert-card vessert-card-hover">
+<svg class="vessert-icon vessert-icon-lg vessert-color-brand-600"><use href="/vessert-sprite.svg#vessert-icon-user-line"></use></svg>
+<h3 class="vessert-h3 vessert-mt-3">Zero external SVG</h3>
+<p class="vessert-muted vessert-text-sm vessert-mt-1">Every icon drawn by hand. No Lucide, no Heroicons, no Tabler.</p>
+</div>
+<div class="vessert-card vessert-card-hover">
+<svg class="vessert-icon vessert-icon-lg vessert-color-brand-600"><use href="/vessert-sprite.svg#vessert-icon-settings-line"></use></svg>
+<h3 class="vessert-h3 vessert-mt-3">Zero Tailwind</h3>
+<p class="vessert-muted vessert-text-sm vessert-mt-1">Utility classes written by hand in css/04-utilities.css.</p>
+</div>
+</div>
+</section>
+<section id="formats" class="vessert-section">
+<h2 class="vessert-h2">All formats handled</h2>
+<p class="vessert-muted vessert-mt-2">Generated by build.js from code, or copied and hashed if binary.</p>
+<div class="vessert-grid-3 vessert-mt-8">
+<div class="vessert-card">
+<h3 class="vessert-h3">Generated from code</h3>
+<ul class="vessert-muted vessert-text-sm vessert-mt-2 vessert-stack vessert-stack-sm">
+<li>PNG via zlib deflate and manual chunks</li>
+<li>ICO wrapping multiple PNG sizes</li>
+<li>BMP with 24-bit BGR rows</li>
+<li>SVG sprite from hand-drawn icons</li>
+<li>WOFF2, WOFF, TTF, OTF, EOT, SVG fonts</li>
+</ul>
+</div>
+<div class="vessert-card">
+<h3 class="vessert-h3">Copied and hashed</h3>
+<ul class="vessert-muted vessert-text-sm vessert-mt-2 vessert-stack vessert-stack-sm">
+<li>woff, woff2, ttf, otf, eot fonts</li>
+<li>webp, avif, jpg photos</li>
+<li>mp4, webm video</li>
+<li>any binary in assets/source</li>
+</ul>
+</div>
+<div class="vessert-card">
+<h3 class="vessert-h3">Written by hand</h3>
+<ul class="vessert-muted vessert-text-sm vessert-mt-2 vessert-stack vessert-stack-sm">
+<li>css, html, js, cjs</li>
+<li>json, xml, txt</li>
+<li>webmanifest</li>
+<li>svg icons and illustrations</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="icons" class="vessert-section">
+<h2 class="vessert-h2">VessertID icon set</h2>
+<p class="vessert-muted vessert-mt-2">Every icon carries a VessertID. The build rejects any vendor marker.</p>
+<div class="vessert-grid-4 vessert-mt-8">
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-menu-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">menu-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-close-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">close-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-search-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">search-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-user-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">user-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-home-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">home-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-settings-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">settings-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-check-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">check-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-chevron-down-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">chevron-down</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-plus-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">plus-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-info-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">info-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-warning-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">warning-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-error-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">error-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-eye-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">eye-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-sun-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">sun-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-moon-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">moon-line</span>
+</div>
+<div class="vessert-card vessert-center vessert-stack-sm">
+<svg class="vessert-icon vessert-icon-xl vessert-color-gray-700"><use href="/vessert-sprite.svg#vessert-icon-heart-line"></use></svg>
+<span class="vessert-text-xs vessert-muted">heart-line</span>
+</div>
+</div>
+</section>
+<section class="vessert-section vessert-grid-3">
+<div class="vessert-alert vessert-alert-info">
+<svg class="vessert-icon"><use href="/vessert-sprite.svg#vessert-icon-info-line"></use></svg>
+<div><strong>Info alert.</strong> Uses the VessertID info icon.</div>
+</div>
+<div class="vessert-alert vessert-alert-success">
+<svg class="vessert-icon"><use href="/vessert-sprite.svg#vessert-icon-success-line"></use></svg>
+<div><strong>Success alert.</strong> All validation passed.</div>
+</div>
+<div class="vessert-alert vessert-alert-warning">
+<svg class="vessert-icon"><use href="/vessert-sprite.svg#vessert-icon-warning-line"></use></svg>
+<div><strong>Warning alert.</strong> Check your input.</div>
+</div>
+</section>
+<section class="vessert-section">
+<div class="vessert-card vessert-stack">
+<h2 class="vessert-h2">Form example</h2>
+<div class="vessert-form-row vessert-form-row-2">
+<div class="vessert-field">
+<label class="vessert-label" for="email">Email</label>
+<input class="vessert-input" id="email" type="email" placeholder="you@example.com">
+<span class="vessert-help">We never share your email.</span>
+</div>
+<div class="vessert-field">
+<label class="vessert-label" for="role">Role</label>
+<select class="vessert-select" id="role">
+<option>Administrator</option>
+<option>Editor</option>
+<option>Viewer</option>
+</select>
+</div>
+</div>
+<label class="vessert-switch">
+<input type="checkbox" checked>
+<span>Enable notifications</span>
+</label>
+<div class="vessert-flex vessert-gap-2 vessert-flex-wrap">
+<button class="vessert-btn vessert-btn-primary">Save</button>
+<button class="vessert-btn vessert-btn-outline">Cancel</button>
+<button class="vessert-btn vessert-btn-danger">
+<svg class="vessert-icon"><use href="/vessert-sprite.svg#vessert-icon-trash-line"></use></svg>
+Delete
+</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="vessert-footer">
+<div class="vessert-container vessert-footer-inner vessert-flex vessert-justify-between vessert-items-center vessert-flex-wrap vessert-gap-4">
+<span>Internal UI zero external, built with node build.js</span>
+<div class="vessert-flex vessert-gap-3">
+<a href="#fonts" class="vessert-nav-link">Fonts</a>
+<a href="#icons" class="vessert-nav-link">Icons</a>
+<a href="#" class="vessert-nav-link">License</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.vessert-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vessert-space-1);
+  min-width: 0;
+}
+.vessert-label {
+  font-size: var(--vessert-text-sm);
+  font-weight: var(--vessert-weight-medium);
+  color: var(--vessert-color-gray-700);
+}
+.vessert-help { font-size: var(--vessert-text-xs); color: var(--vessert-color-gray-500); }
+.vessert-error { font-size: var(--vessert-text-xs); color: var(--vessert-color-danger-600); }
+.vessert-input,
+.vessert-select,
+.vessert-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--vessert-space-2) var(--vessert-space-3);
+  font-size: var(--vessert-text-sm);
+  color: var(--vessert-color-gray-900);
+  background-color: var(--vessert-color-white);
+  border: 1px solid var(--vessert-color-gray-300);
+  border-radius: var(--vessert-radius-md);
+  transition: border-color var(--vessert-transition-fast),
+              box-shadow var(--vessert-transition-fast);
+}
+.vessert-input:focus,
+.vessert-select:focus,
+.vessert-textarea:focus {
+  outline: none;
+  border-color: var(--vessert-color-brand-600);
+  box-shadow: 0 0 0 3px var(--vessert-color-brand-100);
+}
+.vessert-input:disabled,
+.vessert-select:disabled,
+.vessert-textarea:disabled {
+  background-color: var(--vessert-color-gray-100);
+  cursor: not-allowed;
+}
+.vessert-textarea { min-height: 6rem; resize: vertical; }
+.vessert-checkbox,
+.vessert-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--vessert-space-2);
+  cursor: pointer;
+  font-size: var(--vessert-text-sm);
+}
+.vessert-checkbox input,
+.vessert-radio input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--vessert-color-brand-600);
+  cursor: pointer;
+}
+.vessert-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--vessert-space-2);
+  cursor: pointer;
+  font-size: var(--vessert-text-sm);
+}
+.vessert-switch input {
+  appearance: none;
+  width: 2.25rem;
+  height: 1.25rem;
+  background-color: var(--vessert-color-gray-300);
+  border-radius: var(--vessert-radius-full);
+  position: relative;
+  cursor: pointer;
+  transition: background-color var(--vessert-transition-fast);
+  flex-shrink: 0;
+}
+.vessert-switch input::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--vessert-color-white);
+  border-radius: var(--vessert-radius-full);
+  transition: transform var(--vessert-transition-fast);
+}
+.vessert-switch input:checked { background-color: var(--vessert-color-brand-600); }
+.vessert-switch input:checked::after { transform: translateX(1rem); }
+.vessert-form-row { display: grid; gap: var(--vessert-space-4); grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .vessert-form-row-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

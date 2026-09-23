@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, pre { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; max-width: 100%; }
+button { cursor: pointer; background: none; border: none; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+code, pre, kbd, samp { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+:focus-visible { outline: 2px solid var(--vessert-color-brand-600); outline-offset: 2px; }

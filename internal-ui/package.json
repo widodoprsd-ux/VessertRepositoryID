@@ -1,0 +1,70 @@
+{
+  "name": "internal-ui",
+  "version": "1.0.0",
+  "description": "Zero external UI system. Hand-written CSS, hand-drawn SVG, hand-encoded PNG/ICO/BMP, VessertID.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "Vessert",
+  "main": "./dist/internal.cjs",
+  "module": "./dist/internal.js",
+  "exports": {
+    ".": {
+      "import": "./dist/internal.js",
+      "require": "./dist/internal.cjs"
+    },
+    "./css": "./dist/internal.min.css",
+    "./css/full": "./dist/internal.css",
+    "./sprite": "./dist/vessert-sprite.svg",
+    "./sprite/min": "./dist/vessert-sprite.min.svg",
+    "./manifest": "./dist/vessert-manifest.json",
+    "./icons/*": "./dist/assets/vector/icons/*",
+    "./raster/*": "./dist/assets/raster/*",
+    "./fonts/*": "./dist/assets/source/fonts/*",
+    "./img/*": "./dist/assets/vector/img/*",
+    "./assets/*": "./dist/assets/*"
+  },
+  "files": [
+    "dist",
+    "css",
+    "svg",
+    "assets",
+    "public",
+    "build.js",
+    "serve.js",
+    "README.md",
+    "LICENSE",
+    "VESSERT-ID.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "build:sh": "bash build.sh",
+    "serve": "node serve.js",
+    "dev": "node build.js && node serve.js",
+    "clean": "node -e \"import('node:fs').then(fs=>fs.rmSync('dist',{recursive:true,force:true}))\"",
+    "verify": "node build.js"
+  },
+  "keywords": [
+    "internal",
+    "ui",
+    "css",
+    "svg",
+    "sprite",
+    "vessert",
+    "zero-external",
+    "no-dependency",
+    "png-encoder",
+    "ico-encoder"
+  ],
+  "sideEffects": [
+    "./dist/internal.js",
+    "./dist/internal.cjs"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {}
+}
