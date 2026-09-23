@@ -9,30 +9,48 @@
       <stop offset="0%" stop-color="#00FFD1"/>
       <stop offset="100%" stop-color="#00A3FF"/>
     </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
   
   <!-- Background rounded square -->
   <rect x="8" y="8" width="112" height="112" rx="26" ry="26" fill="url(#modGrad)"/>
   
-  <!-- Tulisan "Vessert" (sans-serif bold) -->
-  <text x="64" y="70" 
+  <!-- ===== LOGO MARK (di atas) ===== -->
+  <g transform="translate(64, 42)" filter="url(#softGlow)">
+    <!-- Lingkaran luar -->
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.95"/>
+    
+    <!-- Huruf V di dalam -->
+    <path d="M-13,-11 L-7,-11 L0,10 L7,-11 L13,-11 L4,15 L-4,15 Z" fill="#FFFFFF"/>
+    
+    <!-- Titik aksen (verified dot) -->
+    <circle cx="17" cy="-17" r="5" fill="#00FFD1"/>
+    <path d="M15,-17 L16.5,-15.5 L19.5,-19" stroke="#0066FF" stroke-width="1.5" 
+          fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- ===== TULISAN "Vessert" ===== -->
+  <text x="64" y="90" 
         font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
-        font-size="26" 
+        font-size="20" 
         font-weight="800" 
         fill="#FFFFFF" 
         text-anchor="middle"
-        letter-spacing="-0.5">Vessert</text>
+        letter-spacing="-0.3">Vessert</text>
   
-  <!-- Garis aksen -->
-  <rect x="42" y="80" width="44" height="3" rx="1.5" fill="url(#accentGrad)"/>
+  <!-- Garis aksen pemisah -->
+  <rect x="44" y="97" width="40" height="2.5" rx="1.25" fill="url(#accentGrad)"/>
   
   <!-- Label "ID" -->
-  <text x="64" y="102" 
+  <text x="64" y="112" 
         font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
-        font-size="12" 
+        font-size="10" 
         font-weight="600" 
         fill="#FFFFFF" 
         text-anchor="middle"
-        letter-spacing="6"
-        opacity="0.9">ID</text>
+        letter-spacing="5"
+        opacity="0.85">ID</text>
 </svg>
