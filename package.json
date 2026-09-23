@@ -37,10 +37,10 @@
     "test": "test"
   },
   "scripts": {
-    "start": "npm run dev",
-    "dev": "vite --port=3000 --host=0.0.0.0",
+    "start": "node utils/server.js -p 3000",
+    "dev": "node utils/server.js -p 3000",
     "server": "node utils/server.js -p 8080",
-    "build": "node internal-ui/build.js && vite build",
+    "build": "node internal-ui/build.js",
     "test": "node test/e2e/puppeteer.js",
     "test-e2e": "node test/e2e/puppeteer.js",
     "make-screenshot": "node test/e2e/puppeteer.js --make-screenshot",
@@ -63,9 +63,7 @@
     "url": "https://github.com/widodoprsd-ux/VessertRepositoryID/issues"
   },
   "homepage": "https://github.com/widodoprsd-ux/VessertRepositoryID#readme",
-  "dependencies": {
-    "vite": "^8.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^22.14.0",
     "eslint": "^9.0.0",
