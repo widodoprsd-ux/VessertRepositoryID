@@ -1,51 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
-    <!-- 3 gradient berlebihan -->
-    <linearGradient id="overGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF00FF"/>
-      <stop offset="50%" stop-color="#00FFFF"/>
-      <stop offset="100%" stop-color="#FFAA00"/>
+    <linearGradient id="classicBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A49"/>
+      <stop offset="100%" stop-color="#0F1A2E"/>
     </linearGradient>
-    <linearGradient id="overGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFE600"/>
-      <stop offset="100%" stop-color="#FF0066"/>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8C87A"/>
+      <stop offset="100%" stop-color="#8B6F2E"/>
     </linearGradient>
-    
-    <!-- Glow berlebihan -->
-    <filter id="overGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4"/>
-    </filter>
-    
-    <!-- Shadow berlebihan -->
-    <filter id="overShadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="3" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.7"/>
-    </filter>
   </defs>
   
   <!-- Background kotak kaku -->
-  <rect x="6" y="6" width="116" height="116" rx="4" ry="4" fill="url(#overGrad1)"/>
+  <rect x="4" y="4" width="120" height="120" rx="4" ry="4" fill="url(#classicBg)"/>
   
-  <!-- Border ganda -->
-  <rect x="12" y="12" width="104" height="104" fill="none" stroke="#FFE600" stroke-width="2"/>
-  <rect x="16" y="16" width="96" height="96" fill="none" stroke="#00FFFF" stroke-width="1"/>
+  <!-- Border ganda klasik -->
+  <rect x="10" y="10" width="108" height="108" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+  <rect x="15" y="15" width="98" height="98" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.6"/>
   
-  <!-- Bintang ornamen -->
-  <polygon points="20,20 24,28 32,28 26,34 28,42 20,36 12,42 14,34 8,28 16,28" fill="#FFE600"/>
-  <polygon points="108,20 112,28 120,28 114,34 116,42 108,36 100,42 102,34 96,28 104,28" fill="#FFE600"/>
-  <circle cx="20" cy="108" r="6" fill="#FF0066"/>
-  <circle cx="108" cy="108" r="6" fill="#FF0066"/>
+  <!-- V Serif berkaki -->
+  <text x="64" y="88" 
+        font-family="'Times New Roman', Georgia, serif" 
+        font-size="70" font-weight="700" 
+        fill="url(#goldGrad)" text-anchor="middle">V</text>
   
-  <!-- V dengan outline + glow + shadow -->
-  <g filter="url(#overShadow)">
-    <path d="M30,34 L46,34 L64,84 L82,34 L98,34 L74,100 L54,100 Z" 
-          fill="url(#overGrad2)" 
-          stroke="#FFFFFF" stroke-width="2"
-          filter="url(#overGlow)"/>
-  </g>
+  <!-- Ornamen garis klasik -->
+  <line x1="30" y1="96" x2="54" y2="96" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <line x1="74" y1="96" x2="98" y2="96" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <circle cx="64" cy="96" r="2.5" fill="url(#goldGrad)"/>
   
-  <!-- Pita ribbon -->
-  <rect x="28" y="102" width="72" height="14" rx="2" fill="#FF0066"/>
-  <text x="64" y="112" font-family="Arial Black, sans-serif" 
-        font-size="9" font-weight="900" fill="#FFFFFF" 
-        text-anchor="middle">VESSERT-ID</text>
+  <!-- Tulisan ID serif -->
+  <text x="64" y="112" 
+        font-family="'Times New Roman', Georgia, serif" 
+        font-size="10" font-weight="400" 
+        fill="#E8C87A" text-anchor="middle" letter-spacing="4">ID</text>
 </svg>
