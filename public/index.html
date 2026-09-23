@@ -28,6 +28,7 @@
 <nav class="vessert-nav">
 <a href="#features" class="vessert-nav-link">Features</a>
 <a href="#fonts" class="vessert-nav-link">Fonts</a>
+<a href="#cdn" class="vessert-nav-link">jsDelivr CDN</a>
 <a href="#icons" class="vessert-nav-link">Icons</a>
 <a href="#formats" class="vessert-nav-link">Formats</a>
 <button class="vessert-btn vessert-btn-primary vessert-btn-sm">
@@ -230,6 +231,42 @@ Explore fonts
 <li>webmanifest</li>
 <li>svg icons and illustrations</li>
 </ul>
+</div>
+</div>
+</section>
+<section id="cdn" class="vessert-section">
+<div class="vessert-flex vessert-justify-between vessert-items-center vessert-flex-wrap vessert-gap-2">
+<div>
+<h2 class="vessert-h2">jsDelivr CDN Integration</h2>
+<p class="vessert-muted vessert-mt-2">Deliver stylesheets, SVG sprites, and font files globally with zero latency.</p>
+</div>
+<span class="vessert-badge vessert-badge-brand">Global Edge CDN</span>
+</div>
+<div class="vessert-grid-2 vessert-mt-8">
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">CSS &amp; Icons via CDN</h3>
+<span class="vessert-badge vessert-badge-success">Ready</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Link the production minified stylesheet directly in your HTML:</p>
+<pre class="vessert-code-block" style="padding: 12px; background: #0f172a; color: #38bdf8; border-radius: 6px; font-size: 12px; overflow-x: auto;"><code>&lt;!-- Internal UI Stylesheet --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/widodoprsd-ux/VessertRepositoryID@main/internal.min.css"&gt;
+&lt;!-- SVG Icons Sprite --&gt;
+&lt;svg class="vessert-icon"&gt;
+&lt;use href="https://cdn.jsdelivr.net/gh/widodoprsd-ux/VessertRepositoryID@main/vessert-sprite.svg#vessert-icon-home-line"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+</div>
+<div class="vessert-card vessert-stack">
+<div class="vessert-flex vessert-justify-between vessert-items-center">
+<h3 class="vessert-h3">Font Binaries via CDN</h3>
+<span class="vessert-badge vessert-badge-info">WOFF2 &bull; TTF</span>
+</div>
+<p class="vessert-muted vessert-text-sm">Load any of the 25 VessertID font families from jsDelivr:</p>
+<pre class="vessert-code-block" style="padding: 12px; background: #0f172a; color: #a78bfa; border-radius: 6px; font-size: 12px; overflow-x: auto;"><code>@font-face {
+font-family: 'VessertID-Inter';
+src: url('https://cdn.jsdelivr.net/gh/widodoprsd-ux/VessertRepositoryID@main/internal-ui/dist/assets/source/fonts/VessertID-inter.woff2') format('woff2');
+font-display: swap;
+}</code></pre>
 </div>
 </div>
 </section>
