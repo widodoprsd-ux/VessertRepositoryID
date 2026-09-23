@@ -214,15 +214,42 @@ function drawVessertMark(size, bg, fg, mark) {
   const canvas = makeCanvas(size, size);
   const s = size;
   fillRoundedRect(canvas, s, s, 0, 0, s, s, Math.round(s * 0.22), bg);
-  const pad = Math.round(s * 0.28);
+
+  // Shield base silhouette
   const midX = Math.round(s / 2);
-  const topY = pad;
-  const botY = s - pad;
-  const leftX = pad;
-  const rightX = s - pad;
-  fillTriangle(canvas, s, s, midX, topY, leftX, botY, rightX, botY, mark);
+  const shTop = Math.round(s * 0.15);
+  const shBot = Math.round(s * 0.85);
+  const shW = Math.round(s * 0.32);
+  fillTriangle(canvas, s, s, midX, shBot, midX - shW, shTop, midX + shW, shTop, [255, 255, 255, 60]);
+
+  // Sharp V form (downward pointing)
+  const vTop = Math.round(s * 0.32);
+  const vBot = Math.round(s * 0.72);
+  const vL = Math.round(s * 0.28);
+  const vR = Math.round(s * 0.72);
+  const vThick = Math.max(2, Math.round(s * 0.12));
+
+  // Left arm of V
+  for (let y = vTop; y <= vBot; y++) {
+    const progress = (y - vTop) / (vBot - vTop);
+    const cx = Math.round(vL + progress * (midX - vL));
+    for (let dx = -Math.round(vThick / 2); dx <= Math.round(vThick / 2); dx++) {
+      setPixel(canvas, s, cx + dx, y, mark[0], mark[1], mark[2], mark[3]);
+    }
+  }
+
+  // Right arm of V (folding into D arc)
+  for (let y = vTop; y <= vBot; y++) {
+    const progress = (y - vTop) / (vBot - vTop);
+    const cx = Math.round(midX + progress * (vR - midX));
+    for (let dx = -Math.round(vThick / 2); dx <= Math.round(vThick / 2); dx++) {
+      setPixel(canvas, s, cx + dx, y, mark[0], mark[1], mark[2], Math.round(mark[3] * 0.8));
+    }
+  }
+
+  // ID verification dot / accent
   if (size >= 32) {
-    fillCircle(canvas, s, s, midX, Math.round(s * 0.62), Math.max(2, Math.round(s * 0.05)), bg);
+    fillCircle(canvas, s, s, Math.round(s * 0.62), Math.round(s * 0.44), Math.max(2, Math.round(s * 0.05)), [255, 255, 255, 240]);
   }
   return canvas;
 }

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-23T03:14:48.838Z",
+  "generatedAt": "2026-09-23T03:26:13.979Z",
   "files": {
-    "assets/raster/apple-touch-icon.png": "assets/raster/apple-touch-icon.3530df65ef.png",
-    "assets/raster/favicon.ico": "assets/raster/favicon.02bf0ba240.ico",
-    "assets/raster/icon-192.png": "assets/raster/icon-192.b53e86dec8.png",
-    "assets/raster/icon-512.png": "assets/raster/icon-512.b19b0c89d8.png",
+    "assets/raster/apple-touch-icon.png": "assets/raster/apple-touch-icon.28ac9d8e3d.png",
+    "assets/raster/favicon.ico": "assets/raster/favicon.90fcbcdad3.ico",
+    "assets/raster/icon-192.png": "assets/raster/icon-192.714dd995e7.png",
+    "assets/raster/icon-512.png": "assets/raster/icon-512.a02fca2c2c.png",
     "assets/raster/og-image.png": "assets/raster/og-image.1ee82a6c88.png",
     "assets/raster/placeholder.bmp": "assets/raster/placeholder.000ba74716.bmp",
     "assets/raster/placeholder.png": "assets/raster/placeholder.e1ace40eac.png",
@@ -161,10 +161,10 @@
     "assets/source/fonts/VessertID-times-new-roman.woff2": "assets/source/fonts/VessertID-times-new-roman.1c78b77901.woff2",
     "assets/source/photo/README.txt": "assets/source/photo/README.f0ca2a1892.txt",
     "assets/source/video/README.txt": "assets/source/video/README.1abfd36eb1.txt",
-    "assets/vector/apple-touch-icon.svg": "assets/vector/apple-touch-icon.34937ca694.svg",
-    "assets/vector/favicon.svg": "assets/vector/favicon.68d932c9c7.svg",
-    "assets/vector/icon-192.svg": "assets/vector/icon-192.78ba5be348.svg",
-    "assets/vector/icon-512.svg": "assets/vector/icon-512.efd9ac3af9.svg",
+    "assets/vector/apple-touch-icon.svg": "assets/vector/apple-touch-icon.cb54679209.svg",
+    "assets/vector/favicon.svg": "assets/vector/favicon.c9b919ad4d.svg",
+    "assets/vector/icon-192.svg": "assets/vector/icon-192.62321ce60f.svg",
+    "assets/vector/icon-512.svg": "assets/vector/icon-512.25a2a4b6a7.svg",
     "assets/vector/img/vessert-illus-empty.svg": "assets/vector/img/vessert-illus-empty.3ff1f79497.svg",
     "assets/vector/img/vessert-illus-hero.svg": "assets/vector/img/vessert-illus-hero.79189f4545.svg",
     "assets/vector/og-image.svg": "assets/vector/og-image.1a64c5bdc3.svg",
@@ -175,7 +175,7 @@
     "robots.txt": "robots.432b5dca56.txt",
     "site.webmanifest": "site.56ecc35ce8.webmanifest",
     "sitemap.xml": "sitemap.d1addeff58.xml",
-    "vessert-sprite.min.svg": "vessert-sprite.min.17aaccfd8d.svg",
-    "vessert-sprite.svg": "vessert-sprite.9e74ba4272.svg"
+    "vessert-sprite.min.svg": "vessert-sprite.min.8016667181.svg",
+    "vessert-sprite.svg": "vessert-sprite.a885752d64.svg"
   }
 }
