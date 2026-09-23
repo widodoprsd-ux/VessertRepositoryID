@@ -22,13 +22,8 @@ for (let i = 0; i < args.length; i++) {
   }
 }
 
-// Ensure root directory exists, fallback to current dir
 if (!fs.existsSync(rootDir)) {
-  if (fs.existsSync(path.resolve(process.cwd(), "internal-ui/dist"))) {
-    rootDir = path.resolve(process.cwd(), "internal-ui/dist");
-  } else {
-    rootDir = process.cwd();
-  }
+  rootDir = process.cwd();
 }
 
 const MIME_TYPES = {
@@ -52,7 +47,8 @@ const MIME_TYPES = {
   ".otf": "font/otf",
   ".eot": "application/vnd.ms-fontobject",
   ".map": "application/json",
-  ".txt": "text/plain; charset=utf-8"
+  ".txt": "text/plain; charset=utf-8",
+  ".webmanifest": "application/manifest+json"
 };
 
 function getLocalIpAddresses() {
@@ -69,7 +65,6 @@ function getLocalIpAddresses() {
 }
 
 const server = http.createServer((req, res) => {
-  // CORS Headers for cross-origin font and module loading
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, HEAD, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "*");
@@ -88,37 +83,33 @@ const server = http.createServer((req, res) => {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || "localhost"}`);
   let pathname = decodeURIComponent(parsedUrl.pathname);
 
-  // Normalize path and prevent directory traversal
-  let safePath = path.normalize(path.join(rootDir, pathname));
-  if (!safePath.startsWith(rootDir)) {
-    // Also allow root files (internal.min.css, vessert-sprite.svg)
-    const altPath = path.normalize(path.join(process.cwd(), pathname));
-    if (altPath.startsWith(process.cwd()) && fs.existsSync(altPath)) {
-      safePath = altPath;
-    } else {
-      res.writeHead(403, { "Content-Type": "text/plain" });
-      return res.end("403 Forbidden");
+  // Check in rootDir (public) first, then fallback to project root
+  let targetFile = path.normalize(path.join(rootDir, pathname));
+
+  if (!fs.existsSync(targetFile) || fs.statSync(targetFile).isDirectory()) {
+    const fallbackRoot = path.normalize(path.join(process.cwd(), pathname));
+    if (fs.existsSync(fallbackRoot)) {
+      targetFile = fallbackRoot;
     }
   }
 
-  // Directory handling: look for index.html
-  if (fs.existsSync(safePath) && fs.statSync(safePath).isDirectory()) {
-    const indexPath = path.join(safePath, "index.html");
+  // If pointing to directory, serve index.html
+  if (fs.existsSync(targetFile) && fs.statSync(targetFile).isDirectory()) {
+    const indexPath = path.join(targetFile, "index.html");
     if (fs.existsSync(indexPath)) {
-      safePath = indexPath;
+      targetFile = indexPath;
     }
   }
 
-  fs.stat(safePath, (err, stats) => {
+  fs.stat(targetFile, (err, stats) => {
     if (err || !stats.isFile()) {
       res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
       return res.end(`<!DOCTYPE html><html><body><h1>404 Not Found</h1><p>${pathname}</p></body></html>`);
     }
 
-    const ext = path.extname(safePath).toLowerCase();
+    const ext = path.extname(targetFile).toLowerCase();
     const contentType = MIME_TYPES[ext] || "application/octet-stream";
 
-    // Cache control
     if (ext.startsWith(".woff") || ext === ".ttf" || ext === ".otf" || ext === ".ico" || ext === ".png") {
       res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
     } else {
@@ -134,7 +125,7 @@ const server = http.createServer((req, res) => {
       return res.end();
     }
 
-    const readStream = fs.createReadStream(safePath);
+    const readStream = fs.createReadStream(targetFile);
     readStream.pipe(res);
   });
 });
