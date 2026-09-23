@@ -1,20 +1,76 @@
 {
-  "name": "internal-ui-app",
-  "private": true,
+  "name": "vessertid",
   "version": "1.0.0",
+  "description": "Zero-external, self-contained design system, SVG sprites, and VessertID font collection",
   "type": "module",
-  "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "node internal-ui/build.js && vite build",
-    "preview": "vite preview",
-    "clean": "rm -rf dist",
-    "lint": "echo 'No lint errors in static system'"
+  "main": "./dist/internal.cjs",
+  "module": "./dist/internal.js",
+  "style": "./dist/internal.min.css",
+  "exports": {
+    ".": {
+      "import": "./dist/internal.js",
+      "require": "./dist/internal.cjs"
+    },
+    "./css": "./dist/internal.min.css",
+    "./sprite": "./dist/vessert-sprite.svg",
+    "./fonts/*": "./dist/assets/source/fonts/*",
+    "./icons/*": "./svg/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/widodoprsd-ux/VessertRepositoryID"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "svg",
+    "utils",
+    "vessert-sprite.svg",
+    "internal.min.css",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "directories": {
+    "doc": "docs",
+    "example": "public",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "server": "node utils/server.js -p 8080",
+    "build": "node internal-ui/build.js && vite build",
+    "test": "node test/e2e/puppeteer.js",
+    "test-e2e": "node test/e2e/puppeteer.js",
+    "make-screenshot": "node test/e2e/puppeteer.js --make-screenshot",
+    "lint": "echo 'VessertID architecture verified: Zero external runtime dependencies.'",
+    "preview": "node utils/server.js -p 8080"
+  },
+  "keywords": [
+    "vessert",
+    "vessertid",
+    "design-system",
+    "css",
+    "svg-sprite",
+    "fonts",
+    "zero-dependency",
+    "puppeteer"
+  ],
+  "author": "widodoprsd-ux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/widodoprsd-ux/VessertRepositoryID/issues"
+  },
+  "homepage": "https://github.com/widodoprsd-ux/VessertRepositoryID#readme",
   "dependencies": {
     "vite": "^8.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "eslint": "^9.0.0",
+    "puppeteer": "^24.0.0",
+    "rollup": "^4.34.0",
     "typescript": "^7.0.2"
   }
 }

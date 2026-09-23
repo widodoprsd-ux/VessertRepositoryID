@@ -110,9 +110,34 @@ All font binaries are accessible directly across `woff2`, `woff`, `ttf`, `otf`, 
 
 ---
 
-## 🛠 Local Build
+## 🛠 Local Development & Testing (Three.js Style)
 
+VessertRepositoryID provides a dedicated standalone HTTP server and test suite with **zero external dependencies**:
+
+### 1. Run Local HTTP Server (Port 8080)
+```bash
+# Start standalone HTTP server on port 8080 (accessible from Localhost and HP via Wi-Fi IP)
+npm run server
+# or directly:
+node utils/server.js -p 8080
+```
+When running, the server outputs:
+```text
+  Local          : http://localhost:8080/
+  Network (HP)   : http://192.168.x.x:8080/
+```
+
+### 2. Automated Visual & E2E Testing with Puppeteer
+```bash
+# Run headless browser test suite
+npm run test-e2e
+
+# Capture full-page screenshot
+npm run make-screenshot
+```
+
+### 3. Build Assets
 ```bash
 # Generate font assets, raster binaries, CSS bundle, and SVG sprites
-node internal-ui/build.js
+npm run build
 ```
