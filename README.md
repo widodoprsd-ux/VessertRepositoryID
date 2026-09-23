@@ -136,7 +136,16 @@ npm run test-e2e
 npm run make-screenshot
 ```
 
-### 3. Build Assets
+### 3. Code Quality & Linting (ESLint Flat Config)
+```bash
+# Lint JavaScript source and utilities
+npm run lint
+
+# Auto-fix linting issues
+npm run lint-fix
+```
+
+### 4. Build Assets
 ```bash
 # Generate font assets, raster binaries, CSS bundle, and SVG sprites
 npm run build

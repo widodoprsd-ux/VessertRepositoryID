@@ -41,10 +41,11 @@
     "dev": "node utils/server.js -p 3000",
     "server": "node utils/server.js -p 8080",
     "build": "node internal-ui/build.js",
+    "lint": "eslint internal-ui utils test",
+    "lint-fix": "eslint internal-ui utils test --fix",
     "test": "node test/e2e/puppeteer.js",
     "test-e2e": "node test/e2e/puppeteer.js",
     "make-screenshot": "node test/e2e/puppeteer.js --make-screenshot",
-    "lint": "echo 'VessertID architecture verified: Zero external runtime dependencies.'",
     "preview": "node utils/server.js -p 8080"
   },
   "keywords": [
