@@ -2,7 +2,7 @@
  * VessertID Icon Registry Helper
  */
 
-export class IconRegistry {
+class IconRegistry {
   static prefix = 'vessert-icon-';
 
   static getSymbolId(name) {
@@ -17,3 +17,5 @@ export class IconRegistry {
     return `<svg class="${className}"><use href="/vessert-sprite.svg#${symbolId}"></use></svg>`;
   }
 }
+
+export { IconRegistry };

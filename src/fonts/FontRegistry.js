@@ -2,7 +2,7 @@
  * VessertID Font Registry
  */
 
-export class FontRegistry {
+class FontRegistry {
   static supportedFormats = ['woff2', 'woff', 'ttf', 'otf', 'eot', 'svg'];
 
   static getFontUrl(family, format = 'woff2') {
@@ -21,3 +21,5 @@ export class FontRegistry {
 }`;
   }
 }
+
+export { FontRegistry };

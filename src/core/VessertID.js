@@ -2,7 +2,7 @@
  * VessertID Core Namespace and Configuration
  */
 
-export class VessertID {
+class VessertID {
   static version = '1.0.0';
   static mode = 'zero-external';
 
@@ -16,3 +16,5 @@ export class VessertID {
     };
   }
 }
+
+export { VessertID };

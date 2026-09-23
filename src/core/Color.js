@@ -2,7 +2,7 @@
  * VessertID Color Model & Tokens
  */
 
-export class Color {
+class Color {
   constructor(r = 0, g = 0, b = 0, a = 1) {
     this.r = r;
     this.g = g;
@@ -28,3 +28,5 @@ export class Color {
     return `#${toHexVal(this.r)}${toHexVal(this.g)}${toHexVal(this.b)}`;
   }
 }
+
+export { Color };

@@ -3,10 +3,19 @@
  * Core runtime and design system module
  */
 
-export const VERSION = '1.0.0';
+import { VessertID } from './core/VessertID.js';
+import { Color } from './core/Color.js';
+import { Typography } from './core/Typography.js';
+import { IconRegistry } from './icons/IconRegistry.js';
+import { FontRegistry } from './fonts/FontRegistry.js';
 
-export * from './core/VessertID.js';
-export * from './core/Color.js';
-export * from './core/Typography.js';
-export * from './icons/IconRegistry.js';
-export * from './fonts/FontRegistry.js';
+const VERSION = '1.0.0';
+
+export {
+  VERSION,
+  VessertID,
+  Color,
+  Typography,
+  IconRegistry,
+  FontRegistry
+};

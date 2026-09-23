@@ -2,7 +2,7 @@
  * VessertID Typography & Scale Definitions
  */
 
-export const Typography = {
+const Typography = {
   scale: {
     xs: '0.75rem',
     sm: '0.875rem',
@@ -29,3 +29,5 @@ export const Typography = {
     'VessertID-fira-code'
   ]
 };
+
+export { Typography };
