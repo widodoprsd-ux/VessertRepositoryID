@@ -1,36 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
-    <linearGradient id="classicBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1B2A49"/>
-      <stop offset="100%" stop-color="#0F1A2E"/>
+    <linearGradient id="modGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#0066FF"/>
+      <stop offset="100%" stop-color="#6E00FF"/>
     </linearGradient>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#E8C87A"/>
-      <stop offset="100%" stop-color="#8B6F2E"/>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFD1"/>
+      <stop offset="100%" stop-color="#00A3FF"/>
     </linearGradient>
   </defs>
   
-  <!-- Background kotak kaku -->
-  <rect x="4" y="4" width="120" height="120" rx="4" ry="4" fill="url(#classicBg)"/>
+  <!-- Background rounded square -->
+  <rect x="8" y="8" width="112" height="112" rx="26" ry="26" fill="url(#modGrad)"/>
   
-  <!-- Border ganda klasik -->
-  <rect x="10" y="10" width="108" height="108" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
-  <rect x="15" y="15" width="98" height="98" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.6"/>
+  <!-- Tulisan "Vessert" (sans-serif bold) -->
+  <text x="64" y="70" 
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="26" 
+        font-weight="800" 
+        fill="#FFFFFF" 
+        text-anchor="middle"
+        letter-spacing="-0.5">Vessert</text>
   
-  <!-- V Serif berkaki -->
-  <text x="64" y="88" 
-        font-family="'Times New Roman', Georgia, serif" 
-        font-size="70" font-weight="700" 
-        fill="url(#goldGrad)" text-anchor="middle">V</text>
+  <!-- Garis aksen -->
+  <rect x="42" y="80" width="44" height="3" rx="1.5" fill="url(#accentGrad)"/>
   
-  <!-- Ornamen garis klasik -->
-  <line x1="30" y1="96" x2="54" y2="96" stroke="url(#goldGrad)" stroke-width="1.5"/>
-  <line x1="74" y1="96" x2="98" y2="96" stroke="url(#goldGrad)" stroke-width="1.5"/>
-  <circle cx="64" cy="96" r="2.5" fill="url(#goldGrad)"/>
-  
-  <!-- Tulisan ID serif -->
-  <text x="64" y="112" 
-        font-family="'Times New Roman', Georgia, serif" 
-        font-size="10" font-weight="400" 
-        fill="#E8C87A" text-anchor="middle" letter-spacing="4">ID</text>
+  <!-- Label "ID" -->
+  <text x="64" y="102" 
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="12" 
+        font-weight="600" 
+        fill="#FFFFFF" 
+        text-anchor="middle"
+        letter-spacing="6"
+        opacity="0.9">ID</text>
 </svg>
