@@ -1,19 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
-    <linearGradient id="modGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#6E00FF"/>
+    <!-- 3 gradient berlebihan -->
+    <linearGradient id="overGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF00FF"/>
+      <stop offset="50%" stop-color="#00FFFF"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
     </linearGradient>
+    <linearGradient id="overGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600"/>
+      <stop offset="100%" stop-color="#FF0066"/>
+    </linearGradient>
+    
+    <!-- Glow berlebihan -->
+    <filter id="overGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    
+    <!-- Shadow berlebihan -->
+    <filter id="overShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="3" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
   </defs>
   
-  <!-- Rounded square -->
-  <rect x="8" y="8" width="112" height="112" rx="28" ry="28" fill="url(#modGrad)"/>
+  <!-- Background kotak kaku -->
+  <rect x="6" y="6" width="116" height="116" rx="4" ry="4" fill="url(#overGrad1)"/>
   
-  <!-- Huruf V sans-serif sederhana -->
-  <path d="M34,36 L48,36 L64,82 L80,36 L94,36 L72,98 L56,98 Z" fill="#FFFFFF"/>
+  <!-- Border ganda -->
+  <rect x="12" y="12" width="104" height="104" fill="none" stroke="#FFE600" stroke-width="2"/>
+  <rect x="16" y="16" width="96" height="96" fill="none" stroke="#00FFFF" stroke-width="1"/>
   
-  <!-- Label ID minimalis -->
-  <text x="64" y="116" font-family="Arial, Helvetica, sans-serif" 
-        font-size="10" font-weight="700" fill="#FFFFFF" 
-        text-anchor="middle" letter-spacing="4" opacity="0.9">ID</text>
+  <!-- Bintang ornamen -->
+  <polygon points="20,20 24,28 32,28 26,34 28,42 20,36 12,42 14,34 8,28 16,28" fill="#FFE600"/>
+  <polygon points="108,20 112,28 120,28 114,34 116,42 108,36 100,42 102,34 96,28 104,28" fill="#FFE600"/>
+  <circle cx="20" cy="108" r="6" fill="#FF0066"/>
+  <circle cx="108" cy="108" r="6" fill="#FF0066"/>
+  
+  <!-- V dengan outline + glow + shadow -->
+  <g filter="url(#overShadow)">
+    <path d="M30,34 L46,34 L64,84 L82,34 L98,34 L74,100 L54,100 Z" 
+          fill="url(#overGrad2)" 
+          stroke="#FFFFFF" stroke-width="2"
+          filter="url(#overGlow)"/>
+  </g>
+  
+  <!-- Pita ribbon -->
+  <rect x="28" y="102" width="72" height="14" rx="2" fill="#FF0066"/>
+  <text x="64" y="112" font-family="Arial Black, sans-serif" 
+        font-size="9" font-weight="900" fill="#FFFFFF" 
+        text-anchor="middle">VESSERT-ID</text>
 </svg>
