@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "creator": "VessertID Typeface Generator (Facetype Standard)",
+  "familyName": "VessertID-Helvetica",
+  "ascender": 800,
+  "descender": -200,
+  "underlinePosition": -100,
+  "underlineThickness": 50,
+  "boundingBox": {
+    "yMin": -200,
+    "xMin": 0,
+    "yMax": 800,
+    "xMax": 1000
+  },
+  "resolution": 1000,
+  "original_font_information": {
+    "postscript_name": "VessertID-Helvetica",
+    "version_string": "Version 1.0",
+    "vendor_url": "https://github.com/widodoprsd-ux/VessertRepositoryID",
+    "full_font_name": "VessertID-Helvetica",
+    "font_family_name": "VessertID-Helvetica",
+    "font_subfamily_name": "Regular"
+  },
+  "cssFontWeight": "400",
+  "cssFontStyle": "normal",
+  "glyphs": {
+    " ": {
+      "ha": 500,
+      "x_min": 0,
+      "x_max": 500,
+      "o": []
+    },
+    "A": {
+      "ha": 1000,
+      "x_min": 0,
+      "x_max": 1000,
+      "o": "m 100 0 l 500 800 l 900 0 l 720 0 l 600 240 l 400 240 l 280 0 m 450 360 l 550 360 l 500 580"
+    },
+    "B": {
+      "ha": 1000,
+      "x_min": 0,
+      "x_max": 1000,
+      "o": "m 150 0 l 150 800 l 600 800 b 750 800 850 720 850 580 b 850 480 780 420 680 400 b 800 380 880 300 880 180 b 880 40 760 0 580 0 m 320 480 l 560 480 b 640 480 700 520 700 600 b 700 680 640 700 560 700 l 320 700 m 320 120 l 560 120 b 650 120 720 160 720 260 b 720 360 650 380 560 380 l 320 380"
+    },
+    "C": {
+      "ha": 950,
+      "x_min": 0,
+      "x_max": 950,
+      "o": "m 850 200 b 780 80 680 0 500 0 b 260 0 100 200 100 480 b 100 760 260 880 500 880 b 680 880 780 800 850 680 l 720 580 b 670 680 590 740 500 740 b 340 740 240 600 240 480 b 240 360 340 220 500 220 b 590 220 670 280 720 380"
+    },
+    "E": {
+      "ha": 900,
+      "x_min": 0,
+      "x_max": 900,
+      "o": "m 150 0 l 150 800 l 800 800 l 800 660 l 320 660 l 320 480 l 750 480 l 750 360 l 320 360 l 320 140 l 820 140 l 820 0"
+    },
+    "I": {
+      "ha": 600,
+      "x_min": 0,
+      "x_max": 600,
+      "o": "m 350 0 l 350 800 l 550 800 l 550 0"
+    },
+    "O": {
+      "ha": 1000,
+      "x_min": 0,
+      "x_max": 1000,
+      "o": "m 500 0 b 260 0 100 180 100 480 b 100 780 260 880 500 880 b 740 880 900 780 900 480 b 900 180 740 0 500 0 m 500 140 b 640 140 750 280 750 480 b 750 680 640 740 500 740 b 360 740 250 680 250 480 b 250 280 360 140 500 140"
+    },
+    "R": {
+      "ha": 1000,
+      "x_min": 0,
+      "x_max": 1000,
+      "o": "m 150 0 l 150 800 l 580 800 b 740 800 850 710 850 560 b 850 440 770 370 650 340 l 880 0 l 680 0 l 480 320 l 320 320 l 320 0 m 320 460 l 560 460 b 640 460 700 500 700 580 b 700 660 640 680 560 680 l 320 680"
+    },
+    "T": {
+      "ha": 900,
+      "x_min": 0,
+      "x_max": 900,
+      "o": "m 50 800 l 850 800 l 850 660 l 520 660 l 520 0 l 380 0 l 380 660 l 50 660"
+    },
+    "V": {
+      "ha": 1000,
+      "x_min": 0,
+      "x_max": 1000,
+      "o": "m 50 800 l 450 0 l 550 0 l 950 800 l 780 800 l 500 180 l 220 800"
+    }
+  }
+}

@@ -84,7 +84,33 @@ All font binaries are accessible directly across `woff2`, `woff`, `ttf`, `otf`, 
 }
 ```
 
-### 4. JavaScript Modules (ESM & CJS)
+### 4. Three.js 3D Typeface JSON Collection (`typeface.json`)
+
+VessertID includes official **Three.js `FontLoader` compatible `typeface.json` fonts** generated according to the exact `facetype.js` specification with cubic & quadratic Bézier polygon outlines:
+
+```javascript
+import * as THREE from 'three';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
+
+const loader = new FontLoader();
+loader.load('https://cdn.jsdelivr.net/gh/widodoprsd-ux/VessertRepositoryID@main/src/fonts/typeface/VessertID-inter.typeface.json', (font) => {
+  const geometry = new TextGeometry('VessertID 3D', {
+    font: font,
+    size: 80,
+    depth: 20,
+    curveSegments: 12,
+    bevelEnabled: true,
+    bevelThickness: 10,
+    bevelSize: 8,
+    bevelSegments: 5
+  });
+  const mesh = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color: 0x2563eb }));
+  scene.add(mesh);
+});
+```
+
+### 5. JavaScript Modules (ESM & CJS)
 
 ```html
 <!-- ESM Module -->

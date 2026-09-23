@@ -2,7 +2,12 @@
  * VessertID Core Unit Tests
  */
 
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { VessertID, Color, Typography, IconRegistry, FontRegistry } from '../../src/VessertID.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function assert(condition, message) {
   if (!condition) {
@@ -37,6 +42,18 @@ console.log('✓ IconRegistry verified');
 // Test 5: Font Registry
 const fontFace = FontRegistry.generateFontFace('VessertID-inter', 'woff2');
 assert(fontFace.includes('@font-face'), 'FontFace should generate CSS rule');
+const typefaceUrl = FontRegistry.getTypefaceUrl('VessertID-inter');
+assert(typefaceUrl.endsWith('.typeface.json'), 'getTypefaceUrl should produce .typeface.json path');
 console.log('✓ FontRegistry verified');
 
-console.log('All unit tests passed successfully!\n');
+// Test 6: Three.js Typeface JSON Specification
+const sampleTypefacePath = path.resolve(__dirname, '../../src/fonts/typeface/VessertID-inter.typeface.json');
+assert(fs.existsSync(sampleTypefacePath), 'VessertID-inter.typeface.json must exist');
+const sampleJson = JSON.parse(fs.readFileSync(sampleTypefacePath, 'utf8'));
+assert(sampleJson.schemaVersion === 1, 'Typeface JSON must have schemaVersion 1');
+assert(sampleJson.familyName === 'VessertID-Inter', 'Typeface JSON familyName matches');
+assert(sampleJson.glyphs && sampleJson.glyphs['A'], 'Typeface JSON contains glyph for character A');
+assert(typeof sampleJson.glyphs['A'].o === 'string' && sampleJson.glyphs['A'].o.startsWith('m '), 'Glyph outline format complies with Three.js FontLoader bezier format');
+console.log('✓ Three.js Typeface JSON specification compliance verified');
+
+console.log('\nAll unit tests passed successfully!\n');

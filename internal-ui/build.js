@@ -11,6 +11,7 @@ const SVG_DIR = path.join(ROOT, "svg");
 const ASSETS_SRC = path.join(ROOT, "assets", "source");
 const ASSETS_RASTER = path.join(ROOT, "assets", "raster");
 const ASSETS_VECTOR = path.join(ROOT, "assets", "vector");
+const ASSETS_TYPEFACE = path.join(ROOT, "dist", "assets", "typeface");
 const PUBLIC_DIR = path.join(ROOT, "public");
 
 const VESSERT_ID_REGEX =

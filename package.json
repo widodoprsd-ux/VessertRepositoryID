@@ -14,6 +14,7 @@
     "./css": "./dist/internal.min.css",
     "./sprite": "./dist/vessert-sprite.svg",
     "./fonts/*": "./dist/assets/source/fonts/*",
+    "./typeface/*": "./dist/assets/typeface/*",
     "./icons/*": "./svg/*"
   },
   "repository": {
